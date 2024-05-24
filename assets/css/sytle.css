@@ -6,6 +6,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -21,6 +22,37 @@ html {
 3. Màu sắc
 4. Kiểu dáng ( kiểu chữ, hình tròn, vuông,...) 
 */
+
+/* Common */
+.row{       
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding: 0 8px;
+
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-third{
+    width: calc(100%/3);
+}
+
+.col-full{
+    width: 100%;
+}
+
 .clear {
     clear: both;
 }
@@ -29,6 +61,23 @@ html {
     color: #fff !important;
 }
 
+.text-center{
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 8px !important;
+}
+
+/* Main */
 #main {
     margin: 46px 100px 0 100px;
 }
@@ -151,7 +200,7 @@ html {
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -184,12 +233,6 @@ html {
 
 #content .menbers-list {
     margin-top: 48px;
-}
-
-#content .member-item {
-    text-align: center;
-    float: left;
-    width: calc(100%/3);
 }
 
 #content .member-name {
@@ -241,13 +284,11 @@ html {
 
 /* Places */
 .places-list {
-    margin: 32px -8px 0 -8px;
+    margin-top: 32px;
 }
 
 .place-item {
-    float: left;
     width: calc(100%/3);
-    padding: 0 8px;
 }
 
 .place-img {
@@ -280,7 +321,7 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
+.btn {
     margin-top: 15px;
     padding: 11px 16px;
     background-color: #000;
@@ -288,9 +329,11 @@ html {
     display: inline-block;
     text-align: center;
     text-decoration: none;
+    border: none;
 }
 
-.place-buy-btn:hover {
+.btn:hover {
+    cursor: pointer;
     color: #000;
     background-color: #ccc;
 }
@@ -375,9 +418,11 @@ html {
     text-transform: uppercase;
     padding: 18px;
     cursor: pointer;
+
 }
 
 #buy-tickets:hover {
+    outline: none;
     opacity: 0.8;
 }
 
@@ -400,4 +445,61 @@ html {
     }
 }
 
-#footer {}
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+.map-section img{
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .socials-list{
+    font-size: 24px;
+    
+}
+
+#footer .socials-list a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
